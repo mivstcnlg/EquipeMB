@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lange="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/estilo.css">
+        <style>
+            form {
+    /*apenas para centralizar o form na pagína */
+
+    margin: 0 auto;
+    width: 400px;
+
+    /* pra ver as bordas do formulario */
+
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius:1em ;
+
+}
+
+form div + div{
+
+margin-top: 1em ;
+
+}
+
+ label{
+
+/* para ter certeza que todas as labels tem o mesmo tamanho e estão propriamente alinhadas */
+
+display: inline-block;
+width: 90px;
+text-align: right;
+
+}
+
+input, textarea{
+
+/*  para certificar que todos os campos de texto tem as mesmas configurações de fonte*/
+
+font: 1em sans-serif;
+
+/* para dar o mesmo tamanho a todos os campos de texto */ 
+
+width: 300px;
+box-sizing: border-box;
+
+/* para harmonizar  o look & feels das bordas nos campos de texto*/
+
+border: 1px solid #999
+
+}
+
+input:focus,textarea:focus{
+
+/* dar um pouco de destaque  nos elementos ativos*/
+
+border-color: #000;
+
+}
+
+textarea{
+
+/* para alinhar corretamente os campos de texto de varias linhas com sua label */ 
+
+vertical-align: top;
+
+/* para dar espaço suficiente para digitar algum texto  */
+
+height: 5em;
+
+/*  para permitir aos usuarios redimensionamentarem qualquer textarea vertical.Não funciona em todos os navegadores */
+
+resize: vertical;
+
+}
+
+.button{
+
+/*  para posicionar os botôes  para a mesma posição dos campos de texto*/
+
+padding-left:90px ;
+
+}
+
+ /* button{
+    
+     essa margem extra representa aproximadamente o mesmo espaço entre as labels e os seus campos de texto 
+
+margin-left: 5em;
+
+} 
+*/
+        </style>
+        <title>Joabe</title>
+    </head>
+    <body style="background-color: #8080ff; color: white">
+        <h1 style="text-align: center;"> Joabe Filho </h1>
+        <h3 style="text-align: center;"> Equipe M.B. </h3>
+
+        <form action="pagina" method="POST">
+            <div>
+            <label form="nome">Nome:</label>
+           
+            <input type="text" id="nome" placeholder="Digite seu nome" required />
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            
+            <input type="email" id="email" placeholder="Digite seu email" required />
+        </div>
+        <div>
+            <label form="msg">mensagem</label>
+          
+            <textarea id="msg" placeholder="Deixe uma mensagem de avaliação" required></textarea>
+        </div>
+        <br>
+        <input type="radio" name="opcao" value="masculino" checked>Masculino<br>
+        <input type="radio" name="opcao" value="feminino">feminino<br>
+        <input type="radio" name="opcao" value="outros">Outro<br><br><hr>
+
+       
+
+        <div class="button">
+            <button type="submit">Enviar mensagem</button>
+    
+            <button type="reset">Limpar campos</button>
+        </div>
+        </form>
+    </body>
+</html>
