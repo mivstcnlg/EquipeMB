@@ -1,0 +1,13 @@
+body{
+    background-color: #836FFF;
+    color: black;
+}
+h1, h3 {
+    text-align: center;
+}
+div.box {
+    box-align: center;
+    width: 400px;
+    display: inline-block;
+    margin-left: 40px;
+}
